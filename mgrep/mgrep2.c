@@ -1,4 +1,4 @@
-#include "../functions.h"
+#include "../helperFunctions/functions.h"
 #include <stdio.h>
 const int LENGTH = 100;
 

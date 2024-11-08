@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../functions.h"
+#include "../helperFunctions/functions.h"
 const int LENGTH = 60;
 int main(int argc, char* argv[]){
 

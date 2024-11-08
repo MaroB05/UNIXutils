@@ -9,7 +9,7 @@ FILE *openFile(char* filename, char* mode, char* err_msg);
 
 
 // ---------------------String Manipulation-----------------
-// TODO: create a routine for printing a whole line (use strncpy?)
+// TODO: create a routine for printing a whole line 
 
 char *slice(const char* s, const uint start, const uint end);
 char *slice_delim(const char* s, const uint start, const char *delim);
@@ -21,8 +21,3 @@ size_t count(const char* s, const char delim);
 size_t getchars(char* const buffer, const size_t n, FILE *f); 
 size_t getlines(char * const buffer, const size_t n, FILE *f, size_t *const lines);
 
-/* --------------------Custom Strings------------------------*/
-struct myString{
-  char *s;
-  int len;
-};
