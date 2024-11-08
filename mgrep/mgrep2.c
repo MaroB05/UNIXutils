@@ -1,6 +1,7 @@
 #include "../helperFunctions/functions.h"
 #include <stdio.h>
-const int LENGTH = 100;
+#include <sys/queue.h>
+const int LENGTH = 1024;
 
 int main(int argc, char* argv[]){
 
@@ -38,10 +39,11 @@ int main(int argc, char* argv[]){
     char* pline = buffer;
     do{
       p = getchars(buffer, LENGTH, f);
-      if (p != -1){
+      if (p){
         l = count(buffer, '\n');
       }
-    }while(p != -1);
+      
+    }while(p);
 
     // int lines = 1;
     // int line;
