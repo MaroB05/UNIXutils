@@ -18,6 +18,6 @@ size_t count(const char* s, const char delim);
 
 // reads characters from a File f and writes it buffer with size n
 // returns the number of lines read in this time
-size_t getchars(char* const buffer, const size_t n, FILE *f); 
+size_t getchars(char* const buffer, const size_t n, FILE *f);
 size_t getlines(char * const buffer, const size_t n, FILE *f, size_t *const lines);
 

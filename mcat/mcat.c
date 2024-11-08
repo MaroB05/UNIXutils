@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "../helperFunctions/functions.h"
-const int LENGTH = 60;
+const int LENGTH = 2028;
 int main(int argc, char* argv[]){
 
   FILE *f;

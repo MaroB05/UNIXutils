@@ -43,13 +43,10 @@ int find(const char* target, const char* text){
   return -1;
 }
 
-size_t getchars(char* const buffer, const size_t n, FILE *f){ 
-  size_t c = 0;
-  for (; c < n-1; c++){
-    buffer[c] = fgetc(f);
-    if (buffer[c] == EOF) return -1;
-  }
-  buffer[c] = '\0';
+
+size_t getchars(char* const buffer, const size_t n, FILE *f){
+  size_t c = fread(buffer, 1, n, f);
+  buffer[c-1] = '\0';
   return c;
 }
 
