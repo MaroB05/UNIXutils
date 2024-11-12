@@ -31,18 +31,5 @@ int main(){
     printf("%d %c\n", d[i].size, d[i].chr);
   }
 
-  // printf("%s\n", d);
-  // struct data d = {0, s[0]};
-  //
-  // for (int i = 0; i < strlen(s); i++){
-  //   if (s[i] == d.chr) d.size++;
-  //   else{
-  //     printf("%d %c\n", d.size, d.chr);
-  //     d.size = 1;
-  //     d.chr = s[i];
-  //   }
-  // }
-  // printf("%d %c\n", d.size, d.chr);
-
   return 0;
 }
