@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../helperFunctions/functions.h"
+#include "../helperFunctions/fileio.h"
 const int LENGTH = 2028;
 int main(int argc, char* argv[]){
 
