@@ -8,6 +8,9 @@ compileb:
 	gcc mgrep2.c ../helperFunctions/functions.c -c
 	gcc mgrep2.o functions.o -o mgrep2.out
 
+runb:
+	./mgrep2.out
+
 clean: 
 	rm *.o
 

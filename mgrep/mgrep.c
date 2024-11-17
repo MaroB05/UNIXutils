@@ -1,12 +1,12 @@
-#include "../helperFunctions/functions.h"
 #include <stdio.h>
-const int LENGTH = 100;
+#include "../helperFunctions/fileio.h"
+#include "../helperFunctions/mstring.h"
 
 int main(int argc, char* argv[]){
 
   FILE *f;
   char *buffer;
-  size_t n = 60;
+  size_t n = 1024;
   ssize_t p;
 
   if(argc == 2){
