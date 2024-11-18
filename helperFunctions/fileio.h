@@ -12,6 +12,7 @@ FILE *openFile(char* filename, char* mode, char* err_msg){
   FILE* f = fopen(filename, mode);
 
   if(!f){
+    if (!err_msg) err_msg = "Error opening file\n";
     printf("%s", err_msg);
     return NULL;
   }
