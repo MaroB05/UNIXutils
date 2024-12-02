@@ -1,8 +1,5 @@
 # myUNIX Utilities
 
-# myUNIX
-================
-
 A collection of simple UNIX utilities implemented in C.
 
 ## Utilities
