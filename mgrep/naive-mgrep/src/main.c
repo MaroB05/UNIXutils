@@ -2,24 +2,17 @@
 #include "../../../helperFunctions/fileio.h"
 #include "../../../helperFunctions/mstring.h"
 
+
+void search(const char* term, FILE* stream);
+
 int main(int argc, char* argv[]){
 
   FILE* f;
-  char* buffer = 0;
-  char* old_buffer = 0;
-  size_t n = 4096;
-  ssize_t p;
-  //TODO: replace find with strstr()
+
   if (strcmp(argv[1] ,"") == 0){ return 0;}
 
-  if(argc == 2){
-    do{
-      p = getline(&buffer, &n, stdin);
-      if (buffer != old_buffer && old_buffer)
-        free(old_buffer);
-      if (find(argv[1], buffer)) 
-        printf("%s", buffer);
-    }while(p != -1);
+  if(argc == 2) {
+    search(argv[1], stdin);
   }
   else if (argc < 2){
     printf("not enough arguments: mgrep searchterm [file ....]\n");
