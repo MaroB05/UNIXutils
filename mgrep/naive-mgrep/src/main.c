@@ -27,27 +27,33 @@ int main(int argc, char* argv[]){
       printf("mgrep: cannot open file\n");
       return 1;
     }
-
-    int line = 1;
-    int index = 0;
-    do{
-      p = getline(&buffer, &n, f);
-      if (buffer != old_buffer && old_buffer)
-        free(old_buffer);
-      if(p != -1){
-        index = find(argv[1], buffer);
-        if (index != -1){
-          printf("%d: %s", line, buffer);
-        }
-      }
-      line++;
-    }while(p != -1);
-
+    
+    search(argv[1], f);
     fclose(f);
   }
 
+  // if (buffer)
+  //   free(buffer);
+  return 0;
+}
+
+//inlined function for efficiency
+
+inline void search(const char* term, FILE* stream){
+  int line = 1;
+  int index = 0;
+  char* buffer = 0;
+  char* old_buffer = 0;
+  size_t n = 4096;
+
+  while(getline(&buffer, &n, stream) != -1) {
+    if (buffer != old_buffer && old_buffer)
+      free(old_buffer);
+    if (strstr(buffer ,term))
+      printf("%d: %s", line, buffer);
+    line++;
+  };
   if (buffer)
     free(buffer);
-  return 0;
 }
 
