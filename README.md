@@ -8,6 +8,7 @@ The goal of this series of mini projects is to explore the C Programming Languag
 ### mcat
 
 A minimal implementation of the `cat` command, which reads and displays the contents of one or more files.
+Multiple implementations presented with performance enhancemenets.
 
 ### mgrep
 
