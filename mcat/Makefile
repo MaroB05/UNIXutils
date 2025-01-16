@@ -1,8 +1,10 @@
 
 
 compile: 
-	gcc mcat.c -c
-	gcc mcat.o -o mcat.out
+	gcc src/mcat1.c -o ./build/mcat1.out 
+	gcc src/mcat2.c -o ./build/mcat2.out 
+	gcc src/mcat3.c -o ./build/mcat3.out 
+	gcc src/mcat4.c -o ./build/mcat4.out 
 
 clean: 
 	rm *.o
