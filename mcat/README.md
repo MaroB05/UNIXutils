@@ -3,7 +3,7 @@
 **mcat**
 ================
 
-A minimal implementation of the `cat` command, which reads and displays the contents of one or more files.
+A minimal portable implementation of the `cat` command, which reads and displays the contents of one or more files.
 
 **Overview**
 ------------
@@ -38,8 +38,3 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ------------
 
 Contributions are welcome! If you'd like to add a new feature or improve an existing one, please submit a pull request.
-
-**Acknowledgments**
-----------------
-
-* The `getchars` function was implemented with the help of the `helperFunctions` library.
