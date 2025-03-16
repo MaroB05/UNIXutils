@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <sys/sendfile.h>
 
-// #define size 10 * 1024 * 1024
 int main(int argc, char* argv[]){
 
   if (argc < 3){
@@ -26,7 +25,7 @@ int main(int argc, char* argv[]){
     return -1;
   }
 
-  int size = lseek(src, 0, SEEK_END);
+  off_t size = lseek(src, 0, SEEK_END);
   lseek(src, 0, SEEK_SET);
 
   char* buffer = (char*)malloc(size);

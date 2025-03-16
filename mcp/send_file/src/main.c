@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <sys/sendfile.h>
 
-#define size 4 * 1024
 int main(int argc, char* argv[]){
 
   if (argc < 3){
@@ -26,10 +25,10 @@ int main(int argc, char* argv[]){
     return -1;
   }
 
-  int file_size = lseek(src, 0, SEEK_END);
+  off_t file_size = lseek(src, 0, SEEK_END);
   lseek(src, 0, SEEK_SET);
-  printf("file size: %d\n", file_size);
-  sendfile(dist, src, NULL, file_size);
+
+  while (sendfile(dist, src, NULL, file_size));
 
   return 0;
 }
