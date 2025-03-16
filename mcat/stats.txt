@@ -1,0 +1,94 @@
+--------------------
+mcat5 (mmap):
+  user: 0.002369 	sys: 0.277658
+  total time: 0.4912	CPU: 57.00%
+  Context Switches:
+    voluntary: 560
+    involuntary: 16
+  Page Faults:
+    soft: 228
+    hard: 0
+  File System I/O:
+    input blocks: 0
+    output blocks: 0
+--------------------
+
+--------------------
+mcat4:
+  user: 0.003740 	sys: 0.298383
+  total time: 0.5860	CPU: 51.56%
+  Context Switches:
+    voluntary: 562
+    involuntary: 14
+  Page Faults:
+    soft: 76
+    hard: 0
+  File System I/O:
+    input blocks: 0
+    output blocks: 0
+--------------------
+
+
+--------------------
+mcat5 (mmap) testfile (22GB):
+  user: 0.000000 	sys: 13.042810
+  total time: 19.6225	CPU: 66.47%
+  Context Switches:
+    voluntary: 13896
+    involuntary: 212
+  Page Faults:
+    soft: 5331
+    hard: 0
+  File System I/O:
+    input blocks: 0
+    output blocks: 0
+--------------------
+
+
+--------------------
+user: 0.000000 	sys: 25.770039
+total time: 44.0570	CPU: 58.49%
+Context Switches:
+	voluntary: 27236
+	involuntary: 422
+Page Faults:
+	soft: 735
+	hard: 0
+File System I/O:
+	input blocks: 0
+	output blocks: 0
+
+--------------------
+
+
+--------------------
+user: 0.000785 	sys: 0.303680
+total time: 0.6411	CPU: 47.49%
+Context Switches:
+	voluntary: 538
+	involuntary: 15
+Page Faults:
+	soft: 329
+	hard: 0
+File System I/O:
+	input blocks: 3980
+	output blocks: 0
+
+--------------------
+
+--------------------
+mcat7:
+  user: 0.000879 	sys: 0.301833
+  total time: 0.6350	CPU: 47.67%
+  Context Switches:
+    voluntary: 473
+    involuntary: 6
+  Page Faults:
+    soft: 324
+    hard: 0
+  File System I/O:
+    input blocks: 0
+    output blocks: 0
+
+--------------------
+
