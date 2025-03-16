@@ -1,32 +1,34 @@
 #include <stdio.h>
 #include <string.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 const int LENGTH = 1024 * 1024; // 4KB is the size of a block of memory
 int main(int argc, char* argv[]){
-  FILE *f;
+  int fd;
   char buffer[LENGTH];
   int p;
 
   if (argc < 2){
-    f = stdin;
+    fd = STDIN_FILENO;
     do{
-      fgets(buffer, LENGTH, f);
+      read(fd, buffer, LENGTH);
       puts(buffer);
     }while(buffer);
   }
 
   for (int i = 1; i < argc; i++){
-    f = fopen(argv[i], "r");
+    fd = open(argv[i], O_RDONLY);
   
-    if (!f){
+    if (fd == -1){
       printf("mcat: cannot open file\n");
       return 1;
     }
 
     do{
-      p = fread(buffer, 1, LENGTH, f);
-      fwrite(buffer, 1, p, stdout); // efficient writing and works well with fread
+      p = read(fd, buffer, LENGTH);
+      write(STDOUT_FILENO, buffer, p); // efficient writing and works well with fread
     }while(p == LENGTH);
-    fclose(f);
+    close(fd);
   }
 }
