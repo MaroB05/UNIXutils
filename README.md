@@ -17,6 +17,12 @@ A simple implementation of the `grep` command, which searches for a pattern in o
 ### mzip & munzip
 A simple implementation of `zip` and `unzip` compression utilities, using the [Run-length Encoding](https://en.wikipedia.org/wiki/Run-length_encoding) Algorithm.
 
+### mcp
+Implementing Unix's cp allowing you to copy files.
+
+### pwd
+Implementation of pwd for printing the current directory.
+
 ### helperFunctions
 
 A library of helper functions which we develop as we go on, which is used by the above utilities, providing functionality for file I/O, string manipulation, and more.
@@ -27,19 +33,26 @@ A library of helper functions which we develop as we go on, which is used by the
 
 * Compile: `gcc ../helperFunctions/functions.c mcat.c -o mcat`
 * Run: `./mcat file1 file2 ...`
+* Multiple implementations are presented, with the best of them mcat4 which performs around 13% faster than standard unix cat.
 
 ### mgrep
 
-* Compile: `gcc m../helperFunctions/functions.c grep.c -o mgrep`
+* Compile: `gcc ../helperFunctions/functions.c grep.c -o mgrep`
 * Run: `./mgrep pattern file1 file2 ...`
 
 ### mzip
-* Under development
-* Multiple approaches will be presented
+* Implemented Run-Length encoding compression
+* Advanced algorithms are to be implemented
 
 ### munzip
-* Under development
-* Multiple approaches will be presented
+* Implemented Run-Length encoding decompression
+* Advanced algorithms are to be implemented
+
+### mcp
+* Multiple implementations are presented:
+  - standard read() and write()
+  - sendfile system call.
+
 
 ## Contributing
 
