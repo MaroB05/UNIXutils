@@ -1,0 +1,15 @@
+ab
+biten aux toleration lucia scar bohemian vested afinity carlo sous penitent simpson abiding ca imoral dishonest yawning mustache suplement whirlwind clash terence lamentable benet farthing speck biscuit apelation gdp reserves uncouth birch armchair judy greasy leaden dough lining clevernes ascetic clutch krishna embark quotations friendlines liberaly trance untrue rejection grating hanover inexperienced mon wintry stalwart meats stamping variance apiece firmament absorption aprehensive terminate wilful conveniently 'n' cleanlines colective angela filth philipines timely herein ignoble canton lamentations moslem ware adjective glen invade livid bugy prolong weaken folio dismisal quay enchanting heave purified syrian significantly experimental film represed coperation sequel wench calves
+Retrieved from "htp /en wiktionary org/wiki/Wiktionary Frequency_lists/PG/ / / "
+def g():
+ global big
+ big = file('big.txt').read()
+ N = len(big)
+ s = set()
+ for i in xrange(6, N):
+ c = big[i]
+ if ord(c) > 127 and c not in s:
+ print i, c, ord(c), big[max(0, i-10):min(N, i+10)]
+ s.ad(c)
+ print s
+ print [ord(c) for c in s]

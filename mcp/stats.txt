@@ -1,45 +1,49 @@
+Below is a comparison between:
+  - Debian's cp
+  - read_write cp 
+  - send_file cp 
+the test was done by copying a 22GB file for 10 times using bentest (my other project)
 --------------------
-Standard debian cp (22GB)
-  user: 0.000000 	sys: 30.445491
-  total time: 51.0299	CPU: 59.66%
+read_write:
+  user: 0.001213 	sys: 33.170163
+  total time: 47.0987	CPU: 70.43%
   Context Switches:
-    voluntary: 8594
-    involuntary: 454
+    voluntary: 6823
+    involuntary: 314
   Page Faults:
-    soft: 122
+    soft: 17141
     hard: 1
   File System I/O:
-    input blocks: 36741924
-    output blocks: 43289192
---------------------
-
---------------------
-read_write (22GB):
-  user: 0.010035  sys: 31.911454
-  total time: 39.6765     CPU: 80.45%
-  Context Switches:
-          voluntary: 7115
-          involuntary: 320
-  Page Faults:
-          soft: 589
-          hard: 0
-  File System I/O:
-          input blocks: 39819268
-          output blocks: 43289192
+    input blocks: 38585516
+    output blocks: 43289201
 --------------------
 
 --------------------
 send_file (22GB)
-  user: 0.002024  sys: 0.741054
-  total time: 0.8031      CPU: 92.52%
+  user: 0.000840 	sys: 27.755699
+  total time: 35.6275	CPU: 77.91%
   Context Switches:
-          voluntary: 244
-          involuntary: 12
+    voluntary: 20706
+    involuntary: 490
   Page Faults:
-          soft: 76
-          hard: 0
+    soft: 76
+    hard: 1
   File System I/O:
-          input blocks: 673280
-          output blocks: 1346152
+    input blocks: 38740900
+    output blocks: 43289192
 --------------------
 
+--------------------
+Debian Standard cp:
+  user: 0.000000 	sys: 28.834670
+  total time: 38.6859	CPU: 74.54%
+  Context Switches:
+    voluntary: 14462
+    involuntary: 423
+  Page Faults:
+    soft: 117
+    hard: 4
+  File System I/O:
+    input blocks: 38784474
+    output blocks: 43289192
+--------------------

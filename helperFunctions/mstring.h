@@ -61,7 +61,7 @@ char **split_stric(char* s, const char *delim, char *ignored, int *k){
 }
 
 
-char **split_str(char* s, const char *delim, int *k){
+char **split_str(char* s, const char *delim, int *out_size){
   char **args = (char**)malloc(sizeof(char*) * 100);
   char *token = strtok(strdup(s), delim);
   int i = 0;
@@ -71,7 +71,7 @@ char **split_str(char* s, const char *delim, int *k){
     token = strtok(NULL, delim);
   }
   args[i] = NULL;
-  if (k) *k = i;
+  if (out_size) *out_size = i;
   return args;
 }
 

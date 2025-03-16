@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-FILE *openFile(char* filename, char* mode, char* err_msg);
+FILE *openFile(char* filename, char mode[], char* err_msg);
 
 size_t getchars(char* const buffer, const size_t n, FILE *f); 
 size_t getlines(char * const buffer, const size_t n, FILE *f, size_t *const lines);
