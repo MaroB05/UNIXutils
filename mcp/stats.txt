@@ -1,0 +1,45 @@
+--------------------
+Standard debian cp (22GB)
+  user: 0.000000 	sys: 30.445491
+  total time: 51.0299	CPU: 59.66%
+  Context Switches:
+    voluntary: 8594
+    involuntary: 454
+  Page Faults:
+    soft: 122
+    hard: 1
+  File System I/O:
+    input blocks: 36741924
+    output blocks: 43289192
+--------------------
+
+--------------------
+read_write (22GB):
+  user: 0.010035  sys: 31.911454
+  total time: 39.6765     CPU: 80.45%
+  Context Switches:
+          voluntary: 7115
+          involuntary: 320
+  Page Faults:
+          soft: 589
+          hard: 0
+  File System I/O:
+          input blocks: 39819268
+          output blocks: 43289192
+--------------------
+
+--------------------
+send_file (22GB)
+  user: 0.002024  sys: 0.741054
+  total time: 0.8031      CPU: 92.52%
+  Context Switches:
+          voluntary: 244
+          involuntary: 12
+  Page Faults:
+          soft: 76
+          hard: 0
+  File System I/O:
+          input blocks: 673280
+          output blocks: 1346152
+--------------------
+
