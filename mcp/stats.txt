@@ -47,3 +47,33 @@ Debian Standard cp:
     input blocks: 38784474
     output blocks: 43289192
 --------------------
+
+--------------------
+send large files (22GB)
+  user: 0.000807 	sys: 27.322021
+  total time: 59.6831	CPU: 45.78%
+  Context Switches:
+    voluntary: 21341
+    involuntary: 566
+  Page Faults:
+    soft: 75
+    hard: 0
+  File System I/O:
+    input blocks: 43288929
+    output blocks: 43289192
+--------------------
+
+--------------------
+Send large file fallocate (22GB)
+  user: 0.000000 	sys: 23.705274
+  total time: 45.6151	CPU: 51.97%
+  Context Switches:
+    voluntary: 30918
+    involuntary: 619
+  Page Faults:
+    soft: 74
+    hard: 1
+  File System I/O:
+    input blocks: 43289212
+    output blocks: 43289192
+--------------------
