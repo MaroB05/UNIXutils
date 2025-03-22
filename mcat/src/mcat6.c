@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#define _LARGE_FILES
 
 // const int LENGTH = 1024 * 1024; // 4KB is the size of a block of memory
 int main(int argc, char* argv[]){
