@@ -50,9 +50,9 @@ A library of helper functions which we develop as we go on, which is used by the
 
 ### mcp
 * Multiple implementations are presented:
-  - standard read() and write()
-  - sendfile system call.
-  - use fallocate() to pre-allocate file blocks on disk.
+  - standard `read()` and `write()`
+  - `sendfile` system call.
+  - use `fallocate()` to pre-allocate file blocks on disk.
 
 ## Note
 Benchmarks are done using a tool I have been developing called [`Bentest`](https://github.com/MaroB05/Bentest) for performance measurement
